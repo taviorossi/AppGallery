@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Animacoes.Simples.Simples">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Animation" />
+            <BoxView x:Name="Box" WidthRequest="100" HeightRequest="100" 
+                     CornerRadius="5" BackgroundColor="Accent" Opacity="1" TranslationX="0" 
+                     TranslationY="0" Rotation="0" RotationX="0" RotationY="0" ScaleX="1" 
+                     Scale="1" HorizontalOptions="Center" VerticalOptions="Center" 
+                     />
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button Text="Animação Combinada" Clicked="BtnAnimacaoCombinada" />
+                <Button Text="Animação Personalizada" Clicked="BtnAnimacaoPersonalizada" />
+                <FlexLayout Direction="Row">
+                    <Entry x:Name="TxtColor" Placeholder="Hex" FlexLayout.Grow="1" />
+                    <Button Text="Color" Clicked="BtnColor" />
+                    <Button Text="Cancelar" Clicked="BtnCancela" WidthRequest="100" /> 
+                </FlexLayout>
+                
+                <Button Text="Translate" Clicked="BtnTranslate" />
+                <Button Text="Rotation" Clicked="BtnRotate"/>
+                <Button Text="Scale" Clicked="BtnScale"/>
+                <Button Text="opacity" Clicked="BtnOpacity"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

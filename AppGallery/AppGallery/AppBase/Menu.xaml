@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.AppBase.Menu"
+             xmlns:local ="clr-namespace:AppGallery.AppBase"
+             xmlns:viewmodel="clr-namespace:AppGallery.AppBase.ViewModels"     
+             >
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" Style="{DynamicResource PageMenu}">
+            <ContentPage.BindingContext>
+                <viewmodel:MenuViewModel />
+            </ContentPage.BindingContext>
+            <CollectionView ItemsSource="{Binding MenuItens}" ItemTemplate="{StaticResource bckisabckiashb}" IsGrouped="True">
+                
+                <CollectionView.Header>
+                    <StackLayout>
+                        <StackLayout Padding="30" BackgroundColor="#D6D6D6">
+                            <Image Source="logoclaro.png" />
+                            <Label StyleClass="FontSmall" HorizontalTextAlignment="Center">
+                                <Label.Text>
+                                    Xamarin Forms
+                                    Gallery
+                                </Label.Text>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="10, 10, 5, 5">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="AbrirPaginaFixa" CommandParameter="Inicio" />
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="{AppThemeBinding Light='homeclaro.png', Dark='homeescuro.png'}" />
+                            <Label Text="Ínicio" Margin="7, 0" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="10, 10, 5, 5">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="AbrirPaginaFixa" CommandParameter="Créditos" />
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="{AppThemeBinding Light='heartclaro.png', Dark='heartescuro.png'}"/>
+                            <Label Text="Créditos" Margin="7, 0" />
+                        </StackLayout>
+                    </StackLayout>
+                </CollectionView.Header>
+                
+                <CollectionView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Nome}" TextColor="Black" FontAttributes="Bold" FontSize="18" FontFamily="MontserratBold" Padding="10" Style="{DynamicResource GroupTitle}" />
+                    </DataTemplate>
+                </CollectionView.GroupHeaderTemplate>
+            </CollectionView>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:Inicio />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>

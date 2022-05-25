@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controle.CaixaDeRadioControle.CaixaDeRadio">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
+            <StackLayout><!-- O StackLayout Pode ser utilizado como grupo -->
+                <Label Text="IsChecked, Text, TextColor" />
+                <RadioButton Content="C#" IsChecked="True" TextColor="Blue" FontFamily="arial" />
+                <RadioButton Content="PHP" IsChecked="False" TextColor="Red" FontFamily="arial" />
+                <RadioButton Content="Java" IsChecked="False" TextColor="Green" FontFamily="arial" />
+            </StackLayout>
+            
+            <Label Text="GroupName" />
+            <RadioButton Content="Python" GroupName="Frontend" CheckedChanged="RadioButton_CheckedChanged" />
+            <RadioButton Content="SASS" GroupName="Frontend" CheckedChanged="RadioButton_CheckedChanged" />
+            <RadioButton Content="HTML" GroupName="Frontend" CheckedChanged="RadioButton_CheckedChanged" />
+            <Label x:Name="lblInformativo" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

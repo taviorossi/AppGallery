@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Leiautes.BarraDeRolagemLeiaute.BarraDeRolagem">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <ScrollView Orientation="Both" Scrolled="ScrollView_Scrolled">
+                <StackLayout Padding="10">
+                    <BoxView Color="Black" WidthRequest="500" HeightRequest="500" />
+                    <Label x:Name="Posicao" Text="ScrollView 01" BackgroundColor="Black" TextColor="White" />
+                </StackLayout>
+            </ScrollView>
+            
+            <ScrollView Grid.Row="1" x:Name="BarraDeRolagemScroll">
+                <StackLayout Margin="20">
+                    <ScrollView Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Margin="10">
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                            <BoxView Color="Black" />
+                        </StackLayout>
+                    </ScrollView>
+                    <Button Text="Click Me!" BackgroundColor="Black" TextColor="White" Clicked="RolarParaSegundaLabel" />
+                    <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel diam vitae turpis convallis varius vel eget ligula. Nulla erat ipsum, efficitur ut ligula quis, sollicitudin vulputate nisl. Integer vitae nibh ex. Nunc euismod arcu at tortor ornare rhoncus. Fusce dapibus mollis ipsum, quis efficitur est. Nunc pellentesque condimentum eros, eu faucibus arcu. Nam ut metus et enim vulputate tristique. Etiam non finibus nisl, nec molestie sem.
+Praesent egestas tortor sed malesuada tristique. Nullam fringilla ac neque at sagittis. Aliquam eget purus quis risus varius lacinia et at turpis. In venenatis elit at mi elementum condimentum. Fusce dolor magna, venenatis bibendum diam eu, consequat cursus ex. Nulla et metus tincidunt, ultrices lectus eget, molestie ex. Cras venenatis tristique ex, sit amet dapibus orci tempor ut. Ut ut rutrum tortor. Vestibulum hendrerit mattis ante et dapibus.
+Donec volutpat purus a elit sollicitudin, et congue ex tincidunt. Integer sodales elit scelerisque nisl tincidunt, sed lacinia sem aliquam. Cras feugiat vitae metus vel iaculis. Vestibulum ante libero, elementum non massa non, lacinia semper dui. Nulla ac consectetur elit, a pharetra sapien. Nullam ornare libero nunc, quis accumsan leo congue id. Curabitur sagittis lobortis porttitor. Nulla dui nisl, tincidunt nec congue vitae, mattis ut justo. Praesent sollicitudin dictum eleifend. Vestibulum aliquam dignissim orci sed vestibulum. Donec egestas leo sed hendrerit tincidunt. Proin semper luctus metus, id feugiat quam tincidunt quis. Curabitur neque ex, rutrum a faucibus vitae, porta sit amet augue. Mauris placerat nunc eget consectetur eleifend. Fusce congue justo et rutrum finibus.
+Etiam porta mi a massa lacinia, maximus gravida massa maximus. Integer vel scelerisque ex, et interdum dolor. Curabitur nec nibh at urna semper dignissim quis vel erat. In interdum justo quis dolor vulputate rhoncus volutpat eget urna. Mauris maximus massa orci, non ultrices odio faucibus in. Vivamus ultricies velit eu lectus sodales, ac mattis turpis mattis. Nam dictum pellentesque interdum. Integer laoreet ex vel vehicula ornare. Donec at magna in lacus gravida elementum.
+Proin ac sapien faucibus, eleifend metus eget, convallis sapien. Donec tellus augue, tempus eget nibh ut, finibus ultrices eros. Morbi imperdiet justo ex, at fringilla nunc sodales quis. Quisque rutrum enim vitae ipsum porta, et imperdiet metus interdum. Etiam ac mauris lorem. Ut in vehicula purus. Etiam quis diam sed est placerat porta. Aliquam venenatis nibh laoreet, tincidunt ligula euismod, tincidunt urna."
+                       Padding="20"
+                       BackgroundColor="Black"
+                       TextColor="White"
+                       />
+
+                    <Label x:Name="SegundaLabel" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel diam vitae turpis convallis varius vel eget ligula. Nulla erat ipsum, efficitur ut ligula quis, sollicitudin vulputate nisl. Integer vitae nibh ex. Nunc euismod arcu at tortor ornare rhoncus. Fusce dapibus mollis ipsum, quis efficitur est. Nunc pellentesque condimentum eros, eu faucibus arcu. Nam ut metus et enim vulputate tristique. Etiam non finibus nisl, nec molestie sem.
+Praesent egestas tortor sed malesuada tristique. Nullam fringilla ac neque at sagittis. Aliquam eget purus quis risus varius lacinia et at turpis. In venenatis elit at mi elementum condimentum. Fusce dolor magna, venenatis bibendum diam eu, consequat cursus ex. Nulla et metus tincidunt, ultrices lectus eget, molestie ex. Cras venenatis tristique ex, sit amet dapibus orci tempor ut. Ut ut rutrum tortor. Vestibulum hendrerit mattis ante et dapibus.
+Donec volutpat purus a elit sollicitudin, et congue ex tincidunt. Integer sodales elit scelerisque nisl tincidunt, sed lacinia sem aliquam. Cras feugiat vitae metus vel iaculis. Vestibulum ante libero, elementum non massa non, lacinia semper dui. Nulla ac consectetur elit, a pharetra sapien. Nullam ornare libero nunc, quis accumsan leo congue id. Curabitur sagittis lobortis porttitor. Nulla dui nisl, tincidunt nec congue vitae, mattis ut justo. Praesent sollicitudin dictum eleifend. Vestibulum aliquam dignissim orci sed vestibulum. Donec egestas leo sed hendrerit tincidunt. Proin semper luctus metus, id feugiat quam tincidunt quis. Curabitur neque ex, rutrum a faucibus vitae, porta sit amet augue. Mauris placerat nunc eget consectetur eleifend. Fusce congue justo et rutrum finibus.
+Etiam porta mi a massa lacinia, maximus gravida massa maximus. Integer vel scelerisque ex, et interdum dolor. Curabitur nec nibh at urna semper dignissim quis vel erat. In interdum justo quis dolor vulputate rhoncus volutpat eget urna. Mauris maximus massa orci, non ultrices odio faucibus in. Vivamus ultricies velit eu lectus sodales, ac mattis turpis mattis. Nam dictum pellentesque interdum. Integer laoreet ex vel vehicula ornare. Donec at magna in lacus gravida elementum.
+Proin ac sapien faucibus, eleifend metus eget, convallis sapien. Donec tellus augue, tempus eget nibh ut, finibus ultrices eros. Morbi imperdiet justo ex, at fringilla nunc sodales quis. Quisque rutrum enim vitae ipsum porta, et imperdiet metus interdum. Etiam ac mauris lorem. Ut in vehicula purus. Etiam quis diam sed est placerat porta. Aliquam venenatis nibh laoreet, tincidunt ligula euismod, tincidunt urna."
+                       Padding="20"
+                       BackgroundColor="Black"
+                       TextColor="White"
+                       />
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

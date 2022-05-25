@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Gestos.Gestos">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="gestos" />
+
+                <Label Text="Toque(Tap)" Margin="10, 0" FontSize="24" Padding="10" BackgroundColor="LightGray">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Frame Margin="10">
+                    <Label Text="-" x:Name="LblTap" />
+                </Frame>
+
+                <Label Text="Toque longo(Pan)" Margin="10, 0" FontSize="24" Padding="10" BackgroundColor="LightGray">
+                    <Label.GestureRecognizers>
+                        <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Frame Margin="10">
+                    <Label Text="-" x:Name="Lblpan" />
+                </Frame>
+
+                <Label Text="pinça(Pinch)" Margin="10, 0" FontSize="24" Padding="10" BackgroundColor="LightGray" />
+                <Frame Margin="10">
+                    <Label Text="-" x:Name="LblPinch">
+                        <Label.GestureRecognizers>
+                            <PinchGestureRecognizer PinchUpdated="PinchGestureRecognizer_PinchUpdated" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+
+                <Label Text="Arrastar(Swipe)" Margin="10, 0" FontSize="24" Padding="10" BackgroundColor="LightGray" />
+                <Frame Margin="10">
+                    <Label Text="-" x:Name="LblSwipe">
+                        <Label.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Right, Left" Swiped="SwipeGestureRecognizer_Swiped" />
+                            <SwipeGestureRecognizer Direction="Left" Swiped="SwipeGestureRecognizer_Swiped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Listas.CarrosselControle.Carrossel">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CarouselView" />
+            <Label Text="Prorpiedade(s): ItemSource, ItemTemplate, EmptyView, PeekAreaInsets, RemainingItemsThreshold, ItemsLayout" />
+            <Label Text="Evento(s): RemainingItemsThresholdReached, CurrentItemChanged, PositionChanged" />
+
+            <Label x:Name="lblPosition" />
+            <Label x:Name="lblItem" />
+            <Label x:Name="lblScroll" />
+            <CarouselView Scrolled="Carrossel01_Scrolled" PositionChanged="Carrossel01_PositionChanged" CurrentItemChanged="Carrossel01_CurrentItemChanged" x:Name="Carrossel01" Position="1" PeekAreaInsets="50" RemainingItemsThreshold="1" RemainingItemsThresholdReached="Carrossel01_RemainingItemsThresholdReached">
+                <!--
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CarouselView.ItemsLayout>
+                -->
+                <CarouselView.EmptyView>
+                    <Label Text="nenhum registro!" FontAttributes="Bold" />
+                </CarouselView.EmptyView>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Frame BorderColor="Gray">
+                                <StackLayout>
+                                    <Label Text="{Binding Nome}" TextColor="Black" FontAttributes="Bold" FontSize="18" />
+                                    <Label Text="{Binding Cargo}" TextColor="Gray" FontSize="12" />
+                                    <Label Text="{Binding Descricao}" TextColor="Gray" FontSize="8" />
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>                   
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

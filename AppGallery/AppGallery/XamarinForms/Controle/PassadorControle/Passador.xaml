@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controle.PassadorControle.Passador"
+             Padding="10"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Increment, Minimum, Maximum" />
+            <Stepper Increment="5" Minimum="0" Maximum="25" Value="5" />
+
+            <Label Text="Evento: ValueChanged" />
+            <Stepper ValueChanged="Stepper_ValueChanged" />
+
+            <Label x:Name="lblInformativo" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
