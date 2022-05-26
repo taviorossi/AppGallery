@@ -1,4 +1,6 @@
 ﻿using AppGallery.AppBase.Models;
+using AppGallery.Resources.Controls;
+using AppGallery.Resources.Effects;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
@@ -12,8 +14,11 @@ namespace AppGallery
         {
             
             InitializeComponent();
+            //MainPage = new NavigationPage(new TelaTemp());
             MainPage = new AppBase.Menu();
+            LogicUpdateStatusBarColorByTheme();
         }
+        
 
         public static List<PaginaColecao> MenuItensColecao
         {
@@ -135,6 +140,17 @@ namespace AppGallery
             }
         }
 
+        protected override void OnStart()
+        {
+        }
+
+        protected override void OnSleep()
+        {
+        }
+
+        protected override void OnResume()
+        {
+        }
 
         public void AbrirPagina(object sender, EventArgs e)
         {
@@ -159,16 +175,23 @@ namespace AppGallery
 
         }
 
-        protected override void OnStart()
+        private void LogicUpdateStatusBarColorByTheme()
         {
+            UpdateStatusBarColorByTheme();
+            Application.Current.RequestedThemeChanged += (obj, args) => {
+                UpdateStatusBarColorByTheme();
+            };
         }
-
-        protected override void OnSleep()
+        private void UpdateStatusBarColorByTheme()
         {
-        }
-
-        protected override void OnResume()
-        {
+            if (Application.Current.RequestedTheme == OSAppTheme.Light)
+            {
+                ((MasterDetailPage)MainPage).Detail.Effects.Add(new StatusBarEffect() { BackgroundColor = Color.FromHex("#C4C4C4") });
+            }
+            else
+            {
+                ((MasterDetailPage)MainPage).Detail.Effects.Add(new StatusBarEffect() { BackgroundColor = Color.FromHex("#000000") });
+            }
         }
     }
 }

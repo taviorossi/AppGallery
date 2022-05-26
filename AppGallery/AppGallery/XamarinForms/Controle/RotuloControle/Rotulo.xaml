@@ -1,13 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppGallery.XamarinForms.Controle.RotuloControle.Rotulo">
+             x:Class="AppGallery.XamarinForms.Controle.RotuloControle.Rotulo"
+             xmlns:controls="clr-namespace:AppGallery.Resources.Controls"
+             Title="Label"
+             >
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="10">
-
-                <Label Text="FontFamily, Fontsize, FontAttributes" TextColor="Black" />
-                <Label Text="Texto 01" FontFamily="sans-serif-condensed" FontSize="24" FontAttributes="Italic" />
+                <controls:SubtitleComponentView Properties="FontFamily, Fontsize, FontAttributes" >
+                    <controls:SubtitleComponentView.Component>
+                        <Label Text="Texto 01" FontFamily="sans-serif-condensed" FontSize="24" FontAttributes="Italic" />
+                    </controls:SubtitleComponentView.Component>
+                </controls:SubtitleComponentView>
 
                 <Label Text="HorizontalTextAlign, VerticalTextAlign" TextColor="Black" />
                 <Label Text="Texto 01" BackgroundColor="Black" TextColor="White" HorizontalTextAlignment="Center" HeightRequest="60" WidthRequest="100" HorizontalOptions="Start" />

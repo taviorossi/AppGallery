@@ -4,24 +4,20 @@
              x:Class="AppGallery.AppBase.Inicio"
              xmlns:enhancedEntry="clr-namespace:LeoJHarris.FormsPlugin.Abstractions;assembly=LeoJHarris.FormsPlugin.Abstractions"
              xmlns:viewModel="clr-namespace:AppGallery.AppBase.ViewModels"
-             xmlns:effects="clr-namespace:AppGallery.Resources.Effects"
              >
-
-
+    
     <ContentPage.BindingContext>
         <viewModel:InicioViewModel />
     </ContentPage.BindingContext>
-    <ContentPage.Effects>
-        <effects:StatusBarEffect 
-        BackgroundColor="Red"/>
-    </ContentPage.Effects>
 
     <ContentPage.Content>
         <Grid ColumnSpacing="0">
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
                 <RowDefinition Height="*" />
